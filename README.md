@@ -11,4 +11,5 @@ python -m textblob.download_corpora
 pip3 install twint
 ```
 
-#### Make sure to change the `Username` in `personality.py` to your target username
+#### Make sure to change the `Username` in `personality.py` to your target username.   
+#### Then run: `python personality.py`.
