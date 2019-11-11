@@ -5,7 +5,7 @@ import twint
 
 def get_tweets():
     c = twint.Config()
-    c.Username = "afrntrg"
+    c.Username = "ENTER USER NAME HERE"
     c.Store_object = True 
 
     # get the tweets - they will be stored
