@@ -5,7 +5,8 @@ import twint
 
 def get_tweets():
     c = twint.Config()
-    c.Username = "ENTER USER NAME HERE"
+    USER_NAME = input("Enter username: ")
+    c.Username = USER_NAME
     c.Store_object = True 
 
     # get the tweets - they will be stored
@@ -35,8 +36,8 @@ def get_tweet_sentiment():
     neutral = 0
 
     for tweet in tweets:
-        # create TextBlob object of passed tweet text 
-        analysis = TextBlob(tweet[0]) 
+        # create TextBlob object of passed tweet text
+        analysis = TextBlob(tweet) 
         # set sentiment 
         if analysis.sentiment.polarity > 0: 
             pos += 1
@@ -46,7 +47,7 @@ def get_tweet_sentiment():
             neg += 1
 
     total_tweets = neg + pos + neutral
-    print(f'{total_tweets} tweets were analyzed. {neg} were negative, {pos} were positive and {neutral} were neutral')
+    print(f"{total_tweets} tweets were analyzed. {neg} were negative, {pos} were positive and {neutral} were neutral")
     print(f"The negative percentage is {((neg/total_tweets) * 100) if neg > 0 else 0}")
     print(f"The positive percentage is {((pos/total_tweets) * 100) if pos > 0 else 0}")
     print(f"The neutral percentage is {((neutral/total_tweets) * 100) if neutral > 0 else 0}")
