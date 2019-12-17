@@ -47,10 +47,11 @@ def get_tweet_sentiment():
             neg += 1
 
     total_tweets = neg + pos + neutral
+    print("\n\nRESULTS:")
     print(f"{total_tweets} tweets were analyzed. {neg} were negative, {pos} were positive and {neutral} were neutral")
-    print(f"The negative percentage is {((neg/total_tweets) * 100) if neg > 0 else 0}")
-    print(f"The positive percentage is {((pos/total_tweets) * 100) if pos > 0 else 0}")
-    print(f"The neutral percentage is {((neutral/total_tweets) * 100) if neutral > 0 else 0}")
+    print(f"The negative percentage is: % { round( ((neg/total_tweets) * 100), 2) if neg > 0 else 0}")
+    print(f"The positive percentage is: % { round( ((pos/total_tweets) * 100), 2) if pos > 0 else 0}")
+    print(f"The neutral percentage is: % { round( ((neutral/total_tweets) * 100), 2) if neutral > 0 else 0}")
 
 
 

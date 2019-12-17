@@ -1,6 +1,9 @@
 ## Personality Analyzer
 ### This is for Human Resources or really anyone that wants to see the personality of a twitter user. This will give you the overall sentiment of a given twitter user.
 
+
+![DEMO](twitter_personality.gif)
+
 #### To use, simply run the below commands. (I used pipenv. Choose any virtual env that you like. However, you can just run the below)
 ```
 pip3 install -U textblob  
